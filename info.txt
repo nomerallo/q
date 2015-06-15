@@ -14,9 +14,9 @@ Información para arrancar proyecto:
 
 INFORMACIÓN PARA HACER COMMIT
 
-1) 'git add .'  --> añade los cambios a guardar
+1) 'git add .'  --> añade los cambios a guardar (*)
 
-2) 'git commit -m "Marco de la aplicación"'	--> hace el commit y le asigna un nombre
+2) 'git commit -m "Marco de la aplicación"'	--> hace el commit y le asigna un nombre (*)
 
 3) 'git log --oneline'	--> Ver listado de versiones generadas
 
