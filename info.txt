@@ -1,0 +1,23 @@
+Información para arrancar proyecto:
+
+
+1) Guardar todos los cambios
+
+2) Ejecutar 'node app.js' para comprobar que no haya errores
+
+3) Ejecutar 'npm start' para arrancar el servidor (si este paso no va, 'npm install')
+
+4) Ir al navegador y entrar en http://localhost:3000/
+
+
+
+
+INFORMACIÓN PARA HACER COMMIT
+
+1) 'git add .'  --> añade los cambios a guardar
+
+2) 'git commit -m "Marco de la aplicación"'	--> hace el commit y le asigna un nombre
+
+3) 'git log --oneline'	--> Ver listado de versiones generadas
+
+*) 'git commit -a -m "Nombre versión"'  --> pasos 1) y 2) en uno sólo

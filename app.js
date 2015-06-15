@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');         //Importar paquetes con middlewa
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var partials = require('express-partials');
 
 var routes = require('./routes/index');         //importar enrutadores
 //var users = require('./routes/users');
@@ -13,6 +14,8 @@ var app = express();    //creamos la aplicacion con factoría de objetos
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));    //instala generador de vistas EJS
 app.set('view engine', 'ejs');
+
+app.use(partials());
 
 // uncomment after placing your favicon in /public
 app.use(favicon(__dirname + '/public/favicon.ico'));
