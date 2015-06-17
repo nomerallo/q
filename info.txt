@@ -1,6 +1,5 @@
 Información para arrancar proyecto:
 
-
 1) Guardar todos los cambios
 
 2) Ejecutar 'node app.js' para comprobar que no haya errores
@@ -8,6 +7,9 @@ Información para arrancar proyecto:
 3) Ejecutar 'npm start' para arrancar el servidor (si este paso no va, 'npm install')
 
 4) Ir al navegador y entrar en http://localhost:3000/
+
+OJO!!!!! --> para arrancar desde el paso 7 hay que poner 'foreman start' y entrar en local
+por localhost:5000
 
 
 
