@@ -56,7 +56,7 @@ sequelize.sync().success(function(){
 				pregunta:  'Capital de España',
 				respuesta: 'Madrid'
 			});
-			.success(function(){
+			.then(function(){
 				console.log('Base de datos inicializada');
 			});
 		};
