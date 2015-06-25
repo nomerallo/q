@@ -133,3 +133,11 @@ var errors = quiz.validate();//ya qe el objeto errors no tiene then(
 		.then( function(){ res.redirect('/quizes')}) ;
 	}
 */
+
+
+// DELETE /quizes/:id
+exports.destroy = function(req,res){
+	req.quiz.destroy().then(function(){
+		res.redirect('/quizes');
+	}).catch(function(error){next(error)});
+}
