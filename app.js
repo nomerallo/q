@@ -30,8 +30,7 @@ app.use(session());	//instalamos middleware de sesión
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);       //instala enrutadores
-//app.use('/users', users);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {          //resto de rutas, genera error 404 HTTP
@@ -49,6 +48,8 @@ app.use(function(req, res, next) {          //resto de rutas, genera error 404 H
     //err.status = 404;
     //next(err);
 });
+
+app.use('/', routes);       //instala enrutadores
 
 // error handlers
 
