@@ -31,6 +31,25 @@ app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+//tiempo de sesion
+app.use(function(req, res, next) {
+    if(req.session.user){ // si estamos en una sesion logeada
+        if(!req.session.marcatiempo){ //primera vez se pone la marca de tiempo
+            req.session.marcatiempo=(new Date()).getTime();
+       	}else{
+            if((new Date()).getTime()-req.session.marcatiempo > 15000){//se pasó el tiempo y eliminamos la sesión (2min=120000ms)
+                //console.log('Tiempo de sesión agotado');
+                delete req.session.user;     //eliminamos el usuario
+            }else{//hay actividad se pone nueva marca de tiempo
+                req.session.marcatiempo=(new Date()).getTime();
+            }
+        }
+    }
+    next();
+});
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {          //resto de rutas, genera error 404 HTTP
