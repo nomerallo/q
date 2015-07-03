@@ -37,7 +37,7 @@ app.use(function(req, res, next) {
         if(!req.session.marcatiempo){ //primera vez se pone la marca de tiempo
             req.session.marcatiempo=(new Date()).getTime();
        	}else{
-            if((new Date()).getTime()-req.session.marcatiempo > 15000){//se pasó el tiempo y eliminamos la sesión (2min=120000ms)
+            if((new Date()).getTime()-req.session.marcatiempo > 120000){//se pasó el tiempo y eliminamos la sesión (2min=120000ms)
                 //console.log('Tiempo de sesión agotado');
                 delete req.session.user;     //eliminamos el usuario
             }else{//hay actividad se pone nueva marca de tiempo
